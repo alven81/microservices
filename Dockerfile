@@ -13,3 +13,5 @@ COPY start.sh /start.sh
 RUN cd /reddit && bundle install
 RUN mkdir -p /data/db
 RUN chmod 0777 /start.sh
+
+CMD ["/start.sh"]
