@@ -10,3 +10,6 @@ COPY mongod.conf /etc/mongod.conf
 COPY db_config /app/db_config
 COPY start.sh /start.sh
 
+RUN cd /reddit && bundle install
+RUN mkdir -p /data/db
+RUN chmod 0777 /start.sh
